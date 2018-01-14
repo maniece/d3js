@@ -1,0 +1,25 @@
+<!--  ADDING THE SVG FILES INTO THE HTML PAGE -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Selection of html element</title>
+
+    <!--Added the d3js script file-->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+
+        // Creating a canvas
+        var canvas = d3.select("body").append("svg").attr("width",500).attr("height",500);
+
+        // Drawing the circle inside the canvas
+        var circle = canvas.append("circle").attr("cx",250).attr("r",50).attr("cy",250).attr("fill","pink");
+
+    </script>
+</body>
+
+</html>
