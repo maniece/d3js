@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Selection of html element</title>
+
+    <!--Added the d3js script file-->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+    <p>This is a paragraph tag1</p>
+    <p>This is a paragraph tag2</p>
+    
+    <script>
+        // We can able to dynamically assign the style to the tags. Here is a hardcoded example. Also we can use the API data.
+        d3.selectAll('p').data([23,35]).style('font-size',function(d){return d+'px'});
+
+
+        // enter() will bind the data to the
+        var c = d3.select('body').selectAll('div').data([24,19]).enter().append('div').text(function(d){return "This is No: "+d})
+
+        c.exit().remove();
+    </script>
+</body>
+
+</html>

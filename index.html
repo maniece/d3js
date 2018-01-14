@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Selection of html element</title>
+
+  <!--Added the d3js script file-->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+  <p>I am going to School :) :)</p>
+  <p>I am always happy :) :)</p>
+  Name
+  <input type='text' id='sampleInput' />
+
+  <script>
+    // Changing the content of the <p> tag
+    d3.select('p').text('My name is ABCDEFY');  // It will Select only first <p> tag
+
+    // Change the css styles of <p> tag
+    d3.selectAll('p').style('color', 'pink').style('font-size', '30px'); // selectAll will select all the tags
+
+    // Setting the attribute of the element
+    d3.select('#sampleInput').attr('value', 'Sample Name');
+
+    // Appending <b> tag
+    d3.select('body').append('br');
+    d3.select('body').append('b').text('Bolded Text');
+
+
+  </script>
+</body>
+
+</html>
